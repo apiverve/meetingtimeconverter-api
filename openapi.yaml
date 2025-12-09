@@ -1,0 +1,92 @@
+openapi: 3.0.4
+info:
+  title: Meeting Time Converter
+  description: Meeting Time Converter transforms meeting times between any two timezones, calculating time differences and UTC offsets for global coordination.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/meetingtimeconverter:
+    get:
+      summary: Convert Meeting Time
+      description: Meeting Time Converter transforms meeting times between any two timezones, calculating time differences and UTC offsets for global coordination.
+      operationId: meetingtimeconverter
+      parameters:
+      - name: time
+        in: query
+        schema:
+          type: string
+        required: true
+        description: Time in HH:MM format (24-hour)
+        example: 14:30
+      - name: fromTimezone
+        in: query
+        schema:
+          type: string
+        required: true
+        description: Source IANA timezone identifier
+        example: America/New_York
+      - name: toTimezone
+        in: query
+        schema:
+          type: string
+        required: true
+        description: Target IANA timezone identifier
+        example: Europe/London
+      - name: date
+        in: query
+        schema:
+          type: string
+        required: false
+        description: Optional date in YYYY-MM-DD format (defaults to today)
+        example: 2024-03-15
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  originalTime: 14:30
+                  convertedTime: 14:30:00
+                  fromTimezone: America/New_York
+                  toTimezone: Europe/London
+                  timeDifference: 5
+                  fromOffset: -05:00
+                  toOffset: +00:00
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
