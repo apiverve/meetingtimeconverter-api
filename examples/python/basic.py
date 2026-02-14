@@ -17,14 +17,11 @@ def call_meetingtimeconverter_api():
     Make a GET request to the Meeting Time Converter API
     """
     try:
-        # Query parameters
-        params &#x3D; {&#x27;time&#x27;: &#x27;14:30&#x27;, &#x27;fromTimezone&#x27;: &#x27;America/New_York&#x27;, &#x27;toTimezone&#x27;: &#x27;Europe/London&#x27;, &#x27;date&#x27;: &#x27;2024-03-15&#x27;}
-
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers, params=params)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
