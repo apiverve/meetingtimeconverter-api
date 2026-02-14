@@ -13,15 +13,7 @@ const API_URL = 'https://api.apiverve.com/v1/meetingtimeconverter';
  */
 async function callMeetingTimeConverterAPI() {
   try {
-    // Query parameters
-    const params &#x3D; new URLSearchParams({
-            time: &#x27;14:30&#x27;,
-            fromTimezone: &#x27;America/New_York&#x27;,
-            toTimezone: &#x27;Europe/London&#x27;,
-            date: &#x27;2024-03-15&#x27;
-        });
-
-    const response = await fetch(`${API_URL}?${params}`, {
+    const response = await fetch(API_URL, {
       method: 'GET',
       headers: {
         'x-api-key': API_KEY
