@@ -10,20 +10,14 @@ if os.path.exists(requirements_file):
 
 setup(
     name='apiverve_meetingtimeconverter',
-    version='1.1.12',
+    version='1.1.13',
     packages=find_packages(),
     include_package_data=True,
     install_requires=install_requires,
     description='Meeting Time Converter transforms meeting times between any two timezones, calculating time differences and UTC offsets for global coordination.',
     author='APIVerve',
     author_email='hello@apiverve.com',
-    url='https://apiverve.com',
-    project_urls={
-        'Homepage': 'https://apiverve.com',
-        'Documentation': 'https://docs.apiverve.com/ref/meetingtimeconverter',
-        'Source': 'https://github.com/apiverve/meetingtimeconverter-api',
-        'Bug Tracker': 'https://github.com/apiverve/meetingtimeconverter-api/issues'
-    },
+    url='https://apiverve.com/marketplace/meetingtimeconverter?utm_source=pypi&utm_medium=homepage',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
