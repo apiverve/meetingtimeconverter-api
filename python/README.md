@@ -44,7 +44,12 @@ from apiverve_meetingtimeconverter.apiClient import MeetingtimeconverterAPIClien
 # Initialize the client with your APIVerve API key
 api = MeetingtimeconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "time": "14:30", "fromTimezone": "America/New_York", "toTimezone": "Europe/London", "date": "2024-03-15" }
+query = {
+    "time": "14:30",
+    "fromTimezone": "America/New_York",
+    "toTimezone": "Europe/London",
+    "date": "2024-03-15"
+}
 
 try:
     # Make the API call
@@ -82,7 +87,12 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "time": "14:30", "fromTimezone": "America/New_York", "toTimezone": "Europe/London", "date": "2024-03-15" }
+query = {
+    "time": "14:30",
+    "fromTimezone": "America/New_York",
+    "toTimezone": "Europe/London",
+    "date": "2024-03-15"
+}
 ```
 
 ###### Simple Request
@@ -126,7 +136,12 @@ from apiverve_meetingtimeconverter.apiClient import MeetingtimeconverterAPIClien
 
 api = MeetingtimeconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "time": "14:30", "fromTimezone": "America/New_York", "toTimezone": "Europe/London", "date": "2024-03-15" }
+query = {
+    "time": "14:30",
+    "fromTimezone": "America/New_York",
+    "toTimezone": "Europe/London",
+    "date": "2024-03-15"
+}
 
 try:
     result = api.execute(query)
@@ -147,7 +162,12 @@ from apiverve_meetingtimeconverter.apiClient import MeetingtimeconverterAPIClien
 
 api = MeetingtimeconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "time": "14:30", "fromTimezone": "America/New_York", "toTimezone": "Europe/London", "date": "2024-03-15" }
+query = {
+    "time": "14:30",
+    "fromTimezone": "America/New_York",
+    "toTimezone": "Europe/London",
+    "date": "2024-03-15"
+}
 
 try:
     result = api.execute(query)
@@ -181,7 +201,12 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_meetingtimeconverter.apiClient import MeetingtimeconverterAPIClient, MeetingtimeconverterAPIClientError
 
-query = { "time": "14:30", "fromTimezone": "America/New_York", "toTimezone": "Europe/London", "date": "2024-03-15" }
+query = {
+    "time": "14:30",
+    "fromTimezone": "America/New_York",
+    "toTimezone": "Europe/London",
+    "date": "2024-03-15"
+}
 
 # Using context manager ensures proper cleanup
 with MeetingtimeconverterAPIClient("[YOUR_API_KEY]") as api:
@@ -207,7 +232,12 @@ from apiverve_meetingtimeconverter.apiClient import MeetingtimeconverterAPIClien
 # Enable debug mode
 api = MeetingtimeconverterAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "time": "14:30", "fromTimezone": "America/New_York", "toTimezone": "Europe/London", "date": "2024-03-15" }
+query = {
+    "time": "14:30",
+    "fromTimezone": "America/New_York",
+    "toTimezone": "Europe/London",
+    "date": "2024-03-15"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -222,8 +252,14 @@ from apiverve_meetingtimeconverter.apiClient import MeetingtimeconverterAPIClien
 
 api = MeetingtimeconverterAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "time": "14:30",
+    "fromTimezone": "America/New_York",
+    "toTimezone": "Europe/London",
+    "date": "2024-03-15"
+}
+
 try:
-    query = { "time": "14:30", "fromTimezone": "America/New_York", "toTimezone": "Europe/London", "date": "2024-03-15" }
     result = api.execute(query)
     print(result)
 finally:
