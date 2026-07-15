@@ -30,7 +30,7 @@ class meetingtimeconverterWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/meetingtimeconverter';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"time":{"type":"string","required":true},"fromTimezone":{"type":"string","required":true},"toTimezone":{"type":"string","required":true},"date":{"type":"string","required":false,"format":"date"}};
+        this.validationRules = {"time":{"type":"string","required":true,"format":"time"},"fromTimezone":{"type":"string","required":true,"format":"timezone"},"toTimezone":{"type":"string","required":true,"format":"timezone"},"date":{"type":"string","required":false,"format":"date"}};
     }
 
     /**
