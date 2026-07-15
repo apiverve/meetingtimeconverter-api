@@ -30,7 +30,14 @@ The Meeting Time Converter API provides a simple, reliable way to integrate meet
 ```javascript
 async function callMeetingTimeConverterAPI() {
     try {
-        const response = await fetch('https://api.apiverve.com/v1/meetingtimeconverter', {
+        const params = new URLSearchParams({
+            time: '14:30',
+            fromTimezone: 'America/New_York',
+            toTimezone: 'Europe/London',
+            date: '2024-03-15'
+        });
+
+        const response = await fetch(`https://api.apiverve.com/v1/meetingtimeconverter?${params}`, {
             method: 'GET',
             headers: {
                 'x-api-key': 'YOUR_API_KEY_HERE'
@@ -50,7 +57,7 @@ callMeetingTimeConverterAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/meetingtimeconverter?param=value" \
+curl -X GET "https://api.apiverve.com/v1/meetingtimeconverter?time=14%3A30&fromTimezone=America%2FNew_York&toTimezone=Europe%2FLondon&date=2024-03-15" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -150,7 +157,7 @@ go get github.com/apiverve/meetingtimeconverter-api/go
 |---------|---------|
 | **Multi-language SDKs** | Native packages for JavaScript, Python, C#, Go, and Android |
 | **Simple Integration** | Single API key authentication, consistent response format |
-| **Production Ready** | 99.9% uptime, fast response times, used by thousands of developers |
+| **Production Ready** | 99.9% uptime SLA, served from 24 global regions |
 | **Comprehensive Docs** | Full examples, OpenAPI spec, and dedicated support |
 
 ---
@@ -169,7 +176,7 @@ go get github.com/apiverve/meetingtimeconverter-api/go
 The Meeting Time Converter API is commonly used for:
 
 - **Web Applications** - Add meeting time converter features to your frontend or backend
-- **Mobile Apps** - Native SDKs for iOS and Android development
+- **Mobile Apps** - Native SDKs for Android development
 - **Automation** - Integrate with n8n, Zapier, or custom workflows
 - **SaaS Products** - Enhance your product with meeting time converter capabilities
 - **Data Pipelines** - Process and analyze data at scale
