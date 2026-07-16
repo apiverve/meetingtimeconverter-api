@@ -194,11 +194,34 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Meeting Time Converter API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "originalTime": "14:30",
+    "convertedTime": "14:30:00",
+    "fromTimezone": "America/New_York",
+    "toTimezone": "Europe/London",
+    "timeDifference": 5,
+    "fromOffset": "-05:00",
+    "toOffset": "+00:00"
+  }
 }
 ```
 
