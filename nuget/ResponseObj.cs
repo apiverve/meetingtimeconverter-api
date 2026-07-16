@@ -25,6 +25,9 @@ namespace APIVerve.API.MeetingTimeConverter
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,7 +36,7 @@ namespace APIVerve.API.MeetingTimeConverter
         public string OriginalTime { get; set; }
 
         [JsonProperty("convertedTime")]
-        public DateTimeOffset ConvertedTime { get; set; }
+        public DateTimeOffset? ConvertedTime { get; set; }
 
         [JsonProperty("fromTimezone")]
         public string FromTimezone { get; set; }
@@ -42,12 +45,24 @@ namespace APIVerve.API.MeetingTimeConverter
         public string ToTimezone { get; set; }
 
         [JsonProperty("timeDifference")]
-        public long TimeDifference { get; set; }
+        public long? TimeDifference { get; set; }
 
         [JsonProperty("fromOffset")]
         public string FromOffset { get; set; }
 
         [JsonProperty("toOffset")]
         public string ToOffset { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
