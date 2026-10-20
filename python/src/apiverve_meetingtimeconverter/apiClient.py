@@ -1,6 +1,6 @@
 import re
-from typing import Dict, Optional, Any
-from dataclasses import dataclass, List
+from typing import Dict, Optional, Any, List
+from dataclasses import dataclass
 import requests
 
 
@@ -24,9 +24,9 @@ class ValidationError(MeetingtimeconverterAPIClientError):
 class MeetingtimeconverterAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
-        "time": {"type": "string", "required": True},
-        "fromTimezone": {"type": "string", "required": True},
-        "toTimezone": {"type": "string", "required": True},
+        "time": {"type": "string", "required": True, "format": "time"},
+        "fromTimezone": {"type": "string", "required": True, "format": "timezone"},
+        "toTimezone": {"type": "string", "required": True, "format": "timezone"},
         "date": {"type": "string", "required": False, "format": "date"}
     }
 
