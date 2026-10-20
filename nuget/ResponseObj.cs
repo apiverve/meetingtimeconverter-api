@@ -38,6 +38,9 @@ namespace APIVerve.API.MeetingTimeConverter
         [JsonProperty("convertedTime")]
         public DateTimeOffset? ConvertedTime { get; set; }
 
+        [JsonProperty("date")]
+        public DateTimeOffset? Date { get; set; }
+
         [JsonProperty("fromTimezone")]
         public string FromTimezone { get; set; }
 
