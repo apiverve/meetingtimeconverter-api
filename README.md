@@ -1,13 +1,13 @@
-# [Meeting Time Converter API](https://apiverve.com/marketplace/meetingtimeconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Meeting Time Converter API](https://apiverve.com/marketplace/meetingtimeconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
 Meeting Time Converter transforms meeting times between any two timezones, calculating time differences and UTC offsets for global coordination.
 
 The Meeting Time Converter API provides a simple, reliable way to integrate meeting time converter functionality into your applications. Built for developers who need production-ready meeting time converter capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/meetingtimeconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/meetingtimeconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/meetingtimeconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/meetingtimeconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -164,7 +164,7 @@ go get github.com/apiverve/meetingtimeconverter-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Meeting Time Converter API](https://apiverve.com/marketplace/meetingtimeconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Meeting Time Converter API](https://apiverve.com/marketplace/meetingtimeconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/meetingtimeconverter](https://docs.apiverve.com/ref/meetingtimeconverter)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -215,12 +215,13 @@ A real response from the Meeting Time Converter API:
   "error": null,
   "data": {
     "originalTime": "14:30",
-    "convertedTime": "14:30:00",
+    "convertedTime": "19:30:00",
+    "date": "2026-09-18",
     "fromTimezone": "America/New_York",
     "toTimezone": "Europe/London",
     "timeDifference": 5,
-    "fromOffset": "-05:00",
-    "toOffset": "+00:00"
+    "fromOffset": "-04:00",
+    "toOffset": "+01:00"
   }
 }
 ```
@@ -229,7 +230,7 @@ A real response from the Meeting Time Converter API:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Meeting Time Converter API](https://apiverve.com/marketplace/meetingtimeconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Meeting Time Converter API](https://apiverve.com/marketplace/meetingtimeconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

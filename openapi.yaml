@@ -18,7 +18,7 @@ servers:
 paths:
   /v1/meetingtimeconverter:
     get:
-      summary: Convert Meeting Time
+      summary: Meeting Time Converter
       description: Convert meeting time between timezones
       operationId: meetingtimeconverter
       parameters:
@@ -72,12 +72,13 @@ paths:
                 error: null
                 data:
                   originalTime: '14:30'
-                  convertedTime: '14:30:00'
+                  convertedTime: '19:30:00'
+                  date: '2026-09-18'
                   fromTimezone: America/New_York
                   toTimezone: Europe/London
                   timeDifference: 5
-                  fromOffset: '-05:00'
-                  toOffset: '+00:00'
+                  fromOffset: '-04:00'
+                  toOffset: '+01:00'
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
