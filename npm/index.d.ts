@@ -27,6 +27,7 @@ declare module '@apiverve/meetingtimeconverter' {
   interface MeetingTimeConverterData {
       originalTime:   null | string;
       convertedTime:  null | string;
+      date:           Date | null;
       fromTimezone:   null | string;
       toTimezone:     null | string;
       timeDifference: number | null;
