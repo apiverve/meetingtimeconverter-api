@@ -75,12 +75,13 @@ $client = new Client(
   "error": null,
   "data": {
     "originalTime": "14:30",
-    "convertedTime": "14:30:00",
+    "convertedTime": "19:30:00",
+    "date": "2026-09-18",
     "fromTimezone": "America/New_York",
     "toTimezone": "Europe/London",
     "timeDifference": 5,
-    "fromOffset": "-05:00",
-    "toOffset": "+00:00"
+    "fromOffset": "-04:00",
+    "toOffset": "+01:00"
   }
 }
 ```
@@ -92,11 +93,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/meetingtimeconverter?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/meetingtimeconverter?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/meetingtimeconverter?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/meetingtimeconverter?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/meetingtimeconverter?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/meetingtimeconverter?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
