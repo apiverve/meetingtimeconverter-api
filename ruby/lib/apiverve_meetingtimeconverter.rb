@@ -4,6 +4,6 @@ require_relative "apiverve_meetingtimeconverter/client"
 
 module APIVerve
   module Meetingtimeconverter
-    VERSION = "1.2.2"
+    VERSION = "1.2.3"
   end
 end
