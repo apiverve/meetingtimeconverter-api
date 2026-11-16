@@ -1,6 +1,6 @@
 name: apiverve_meetingtimeconverter
 description: "Meeting Time Converter transforms meeting times between any two timezones, calculating time differences and UTC offsets for global coordination."
-version: 1.2.5
+version: 1.2.6
 homepage: https://apiverve.com/marketplace/meetingtimeconverter?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/meetingtimeconverter-api/tree/main/dart
 
